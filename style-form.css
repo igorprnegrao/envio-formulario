@@ -7,6 +7,7 @@
 }
 
 body {
+    background-image: url('./img/bg02-site-allan.png');
     height: 100vh;
     display: flex;
     align-items: center;
@@ -19,6 +20,7 @@ body {
     border: 1px solid #eeeeee;
     border-radius: 10px;
     background-color: #015c0b;
+    box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.415);
 }
 
 h4 {
