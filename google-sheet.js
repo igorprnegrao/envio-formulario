@@ -2,7 +2,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbx58wkid2P3swbL-4dpsg
 
 const form = document.forms['formulario-contato']
 
-form.addEventListener('enviar', e => {
+form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, {method: 'POST', body: new FormData(form)})
     .then(response => alert('Obrigado, por entrar em contato conosco!'))
