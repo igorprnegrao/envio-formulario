@@ -45,6 +45,18 @@ input {
 textarea {
     width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 19px;
+    color: #eeeeee;
+}
+
+#checkbox1 {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
 }
 
 #submit {
@@ -54,6 +66,7 @@ textarea {
     width: 200px;
     margin-top: 10px;
     border-radius: 5px;
+    display: block
 }
 
 #submit:hover {
