@@ -7,7 +7,7 @@ const manipularEnviar = (event) => {
     
     const name = document.querySelector('input[name=seu-nome]').value;
     const numero = document.querySelector('input[name=seu-numero]').value;
-    const email = document.querySelector('input[name=seu-email]').value;
+    const bairro = document.querySelector('input[name=seu-bairro]').value;
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
 
     
@@ -19,7 +19,7 @@ const manipularEnviar = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, numero, email, texto})
+        body: JSON.stringify({ name, numero, bairro, texto})
     }).then(() => alert('Obrigado por nos cotactar, dados enviados com sucesso!'))
     .then(() => {
         window.location = 'agradecimento.html'
