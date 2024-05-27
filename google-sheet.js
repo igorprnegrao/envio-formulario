@@ -24,6 +24,7 @@ const manipularEnviar = (event) => {
     .then(() => {
         window.location = 'agradecimento.html'
     })
+    //após envio temos uma then com função alert e outra com função redirecionar página   
 }
 
 // Capturar o evento de submit(enviar) e ativar a função manipularEviar
