@@ -10,7 +10,7 @@ const manipularEnviar = (event) => {
     const numero = document.querySelector('input[name=seu-numero]').value;
     const bairro = document.querySelector('input[name=seu-bairro]').value;
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
-    const autorizacao = document.querySelector('checkbox[name=sua-autorizacao]').value
+    const autorizacao = document.querySelector('input[type=checkbox]').value
 
     
 
