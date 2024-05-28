@@ -12,8 +12,7 @@ const manipularEnviar = (event) => {
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
     const autorizacao = document.querySelector('input[type=checkbox]').checked
     const autorizacaoString = autorizacao ? 'sim' : 'não';
-    console.log(autorizacao)
-    console.log(autorizacaoString)
+    
 
 
     //Função Post que vai enviar para o endpoint da api sheet monkey
@@ -24,7 +23,7 @@ const manipularEnviar = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ cadastrante, name, numero, bairro, texto, autorizacao })
+        body: JSON.stringify({ cadastrante, name, numero, bairro, texto, autorizacao: autorizacaoString })
     }).then(() => alert('Obrigado por nos cotactar, dados enviados com sucesso!'))
     .then(() => {
         window.location = 'agradecimento.html'
