@@ -10,9 +10,11 @@ const manipularEnviar = (event) => {
     const numero = document.querySelector('input[name=seu-numero]').value;
     const bairro = document.querySelector('input[name=seu-bairro]').value;
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
-    const autorizacao = document.querySelector('input[type=checkbox]').value
+    const autorizacao = document.querySelector('input[type=checkbox]').checked
+    const autorizacaoString = autorizacao ? 'sim' : 'não';
+    console.log(autorizacao)
+    console.log(autorizacaoString)
 
-    
 
     //Função Post que vai enviar para o endpoint da api sheet monkey
     // através do objeto iremos enviar via json as strings para nossa planilha
