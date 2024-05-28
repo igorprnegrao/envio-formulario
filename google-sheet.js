@@ -10,7 +10,9 @@ const manipularEnviar = (event) => {
     const numero = document.querySelector('input[name=seu-numero]').value;
     const bairro = document.querySelector('input[name=seu-bairro]').value;
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
+    // o elemento checkbox deve conter .checked ao invés de .value e o input[type=checkbox]
     const autorizacao = document.querySelector('input[type=checkbox]').checked
+    // foi criado uma nova variável que vai fazer a condicional se foi marcada ou não retornado o valor sim ou não.
     const autorizacaoString = autorizacao ? 'sim' : 'não';
     
 
@@ -24,8 +26,8 @@ const manipularEnviar = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ cadastrante, name, numero, bairro, texto, autorizacao: autorizacaoString })
-    }).then(() => alert('Obrigado por nos cotactar, dados enviados com sucesso!'))
+        body: JSON.stringify({ cadastrante, name, numero, bairro, texto, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
+    }).then(() => alert('Dados sendo enviados...'))
     .then(() => {
         window.location = 'agradecimento.html'
     })
