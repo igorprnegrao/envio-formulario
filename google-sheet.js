@@ -5,7 +5,7 @@ const manipularEnviar = (event) => {
     //capturar o evento e da uma preventdefault para evitar que a pág. recarregue
     event.preventDefault();
     const cadastrante = document.querySelector('input[name=quem-cadastrou]').value;
-
+    
     const name = document.querySelector('input[name=seu-nome]').value;
     const numero = document.querySelector('input[name=seu-numero]').value;
     const bairro = document.querySelector('input[name=seu-bairro]').value;
@@ -14,6 +14,7 @@ const manipularEnviar = (event) => {
     const autorizacaoString = autorizacao ? 'sim' : 'não';
     
 
+    
 
     //Função Post que vai enviar para o endpoint da api sheet monkey
     // através do objeto iremos enviar via json as strings para nossa planilha
