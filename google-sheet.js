@@ -5,15 +5,18 @@ const manipularEnviar = (event) => {
     //capturar o evento e da uma preventdefault para evitar que a pág. recarregue
     event.preventDefault();
     const cadastrante = document.querySelector('input[name=quem-cadastrou]').value;
-    
+    const cadastranteUp = cadastrante.toUpperCase()
     const name = document.querySelector('input[name=seu-nome]').value;
+    const nameUp = name.toUpperCase()
     const numero = document.querySelector('input[name=seu-numero]').value;
     const bairro = document.querySelector('input[name=seu-bairro]').value;
+    const bairroUp = bairro.toUpperCase()
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
+    const textoUp = texto.toUpperCase()
     // o elemento checkbox deve conter .checked ao invés de .value e o input[type=checkbox]
     const autorizacao = document.querySelector('input[type=checkbox]').checked
     // foi criado uma nova variável que vai fazer a condicional se foi marcada ou não retornado o valor sim ou não.
-    const autorizacaoString = autorizacao ? 'sim' : 'não';
+    const autorizacaoString = autorizacao ? 'SIM' : 'NÃO';
     
 
     
@@ -26,7 +29,7 @@ const manipularEnviar = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ cadastrante, name, numero, bairro, texto, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
+        body: JSON.stringify({ cadastrante: cadastranteUp, name: nameUp, numero, bairro: bairroUp, texto: textoUp, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
     }).then(() => alert('Dados sendo enviados...'))
     .then(() => {
         window.location = 'agradecimento.html'
