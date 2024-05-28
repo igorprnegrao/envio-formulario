@@ -30,3 +30,10 @@ a > span {
     color: rgb(255, 70, 3);
     font-weight: 700;
 }
+
+@media screen and (max-width: 1064px) {
+    h1 {
+        font-size: 28px;
+        margin-left: 50px;
+    }
+}
