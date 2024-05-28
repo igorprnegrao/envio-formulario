@@ -73,4 +73,30 @@ label {
     background-color: #333333;
 }
 
+@media screen and (max-width: 1064px) {
+    
+    .container {
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    label {
+    font-size: 16px;
+    color: #eeeeee;
+    }
+
+    h3 {
+        margin-left: 0px;
+        font-size: 19px;
+    }
+
+    h4 {
+        margin-left: 0px;
+    }
+
+}
+
 
