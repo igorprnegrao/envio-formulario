@@ -9,6 +9,6 @@
 
 Sobre
 
-Criei um sistema de cadastro interno de baixo custo para agentes políticos auxiliando na elaboração e estruturação da sua base de eleitores.
+Criei um **Sistema de Cadastro Interno** de baixo custo para agentes políticos auxiliando na elaboração e estruturação da sua base de eleitores.
 
 
