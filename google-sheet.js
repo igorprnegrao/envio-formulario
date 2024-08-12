@@ -4,10 +4,11 @@
 const manipularEnviar = (event) => {
     //capturar o evento e da uma preventdefault para evitar que a pág. recarregue
     event.preventDefault();
-    const cadastrante = document.querySelector('input[name=quem-cadastrou]').value;
-    const cadastranteUp = cadastrante.toUpperCase()
+    
     const name = document.querySelector('input[name=seu-nome]').value;
     const nameUp = name.toUpperCase()
+    const niver = document.querySelector('input[name=seu-niver]').value;
+    const niverUp = niver.toUpperCase() 
     const numero = document.querySelector('input[name=seu-numero]').value;
     const bairro = document.querySelector('input[name=seu-bairro]').value;
     const bairroUp = bairro.toUpperCase()
@@ -29,7 +30,7 @@ const manipularEnviar = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ cadastrante: cadastranteUp, name: nameUp, numero, bairro: bairroUp, texto: textoUp, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
+        body: JSON.stringify({ name: nameUp, numero, niverUp, bairro: bairroUp, texto: textoUp, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
     }).then(() => alert('Dados sendo enviados...'))
     .then(() => {
         window.location = 'agradecimento.html'
