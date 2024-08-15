@@ -13,7 +13,7 @@ const manipularEnviar = (event) => {
     const bairro = document.querySelector('input[name=seu-bairro]').value;
     const bairroUp = bairro.toUpperCase()
     const liderName = document.querySelector('input[name=quem-cadastrou]').value;
-    const liderNameUp = liderName.toUpperCase
+    const liderNameUp = liderName.toUpperCase()
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
     const textoUp = texto.toUpperCase()
     // o elemento checkbox deve conter .checked ao invés de .value e o input[type=checkbox]
