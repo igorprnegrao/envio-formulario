@@ -32,7 +32,7 @@ const manipularEnviar = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name: nameUp, numero, niverUp, bairro: bairroUp,liderName: liderNameUp, texto: textoUp, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
+        body: JSON.stringify({ name: nameUp, numero, niverUp, bairro: bairroUp, liderName: liderNameUp, texto: textoUp, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
     }).then(() => alert('Dados sendo enviados...'))
     .then(() => {
         window.location = 'agradecimento.html'
