@@ -12,6 +12,8 @@ const manipularEnviar = (event) => {
     const numero = document.querySelector('input[name=seu-numero]').value;
     const bairro = document.querySelector('input[name=seu-bairro]').value;
     const bairroUp = bairro.toUpperCase()
+    const liderName = document.querySelector('input[name=quem-cadastrou]').value;
+    const liderNameUp = liderName.toUpperCase
     const texto = document.querySelector('textarea[name=sua-mensagem]').value;
     const textoUp = texto.toUpperCase()
     // o elemento checkbox deve conter .checked ao invés de .value e o input[type=checkbox]
@@ -30,7 +32,7 @@ const manipularEnviar = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name: nameUp, numero, niverUp, bairro: bairroUp, texto: textoUp, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
+        body: JSON.stringify({ name: nameUp, numero, niverUp, bairro: bairroUp,liderName: liderNameUp, texto: textoUp, autorizacao: autorizacaoString }) // valor autorizacao recebe o ternario autorizacaoString
     }).then(() => alert('Dados sendo enviados...'))
     .then(() => {
         window.location = 'agradecimento.html'
